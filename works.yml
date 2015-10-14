@@ -1,0 +1,9 @@
+# vim: ft=ansible
+---
+- name: working playbook
+  gather_facts: false
+  connection: local
+  hosts: localhost
+  tasks:
+    - name: working task one
+      template: src=templates/foo.j2 dest=output/foo 

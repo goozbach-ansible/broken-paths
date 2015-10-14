@@ -1,0 +1,11 @@
+# vim: ft=ansible
+---
+- include: util/foo.yml
+
+- name: broken playbook
+  gather_facts: false
+  connection: local
+  hosts: localhost
+  tasks:
+    - name: broken task one
+      template: src=templates/foo.j2 dest=output/foo 

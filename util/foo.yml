@@ -1,0 +1,11 @@
+# vim: ft=ansible
+---
+- name: utility playbook
+  gather_facts: false
+  connection: local
+  hosts: localhost
+  tasks:
+    - name: utility task one
+      debug: msg="utility task one"
+
+
